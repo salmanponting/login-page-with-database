@@ -1,3 +1,6 @@
+<?php
+require_once('config.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,20 +9,6 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
-
-<div>
-    <?php
-        if (isset($_POST['create'])){
-            $firstname = $_POST['firstname'];
-            $lastname = $_POST['lastname'];
-            $phonenumber = $_POST['phonenumber'];
-            $password = $_POST['password'];
-
-            echo $firstname ."". $lastname ."". $phonenumber ."". $password;
-
-        }
-    ?>
-</div>
 
 <div>
     <form action="register.php" method="post">
@@ -35,7 +24,7 @@
 
                     <label for="lastname"><b>Last Name</b></label>
                     <input class="form-control" id="lastname"  type="text" name="lastname" required>
-\
+
                     <label for="phonenumber"><b>Phone Number</b></label>
                     <input class="form-control" id="phonenumber"  type="text" name="phonenumber" required>
 
@@ -48,5 +37,8 @@
         </div>
     </form>
 </div>
+
+
+
 
 </body>
